@@ -1,3 +1,6 @@
+#Leonardo Saveri
+#MS-Project Fall 2021
+
 #OPTIONS AND CHOOSING THE DATA
 options(scipen=999)
 data <- read.csv(file.choose(), sep=",", dec=".", header=TRUE)

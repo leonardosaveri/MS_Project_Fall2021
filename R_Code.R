@@ -28,11 +28,11 @@ plot(acousticness, popularity, main="Relation Popularity-Acousticness",
 #Correlation Popularity-Acousticness
 abline(lm(popularity ~ acousticness), col = "red", lwd = 3)
 
-#Scatterplot, Popularity-Danceability
+#Scatterplot, Acousticness-Danceability
 plot(acousticness, danceability, main="Relation Popularity-Danceability", 
      xlab="Acousticness ", ylab="Danceability", pch=19)
 
-#Correlation Popularity-Danceability
+#Correlation Acousticness-Danceability
 abline(lm(danceability ~ acousticness), col = "red", lwd = 3)
 
 

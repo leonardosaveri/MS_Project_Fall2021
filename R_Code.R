@@ -1,4 +1,4 @@
-#Leonardo Saveri
+#Leonardo Saveri - 3139812
 #MS-Project Fall 2021
 
 #OPTIONS AND CHOOSING THE DATA
@@ -19,21 +19,21 @@ names(data)
 #GRAPHS
 #Scatterplot, Popularity-Danceability
 plot(danceability, popularity, main="Relation Popularity-Danceability", 
-     xlab="Danceability ", ylab="Popularity", pch=19)
+     xlab="Danceability ", ylab="Popularity", pch=19, cex = 0.15)
 
 #Correlation Popularity-Danceability
 abline(lm(popularity ~ danceability), col = "red", lwd = 3)
 
 #Scatterplot, Popularity-Acousticness
 plot(acousticness, popularity, main="Relation Popularity-Acousticness", 
-     xlab="Acousticness ", ylab="Popularity", pch=19)
+     xlab="Acousticness ", ylab="Popularity", pch=19, cex = 0.15)
 
 #Correlation Popularity-Acousticness
 abline(lm(popularity ~ acousticness), col = "red", lwd = 3)
 
 #Scatterplot, Acousticness-Danceability
-plot(acousticness, danceability, main="Relation Popularity-Danceability", 
-     xlab="Acousticness ", ylab="Danceability", pch=19)
+plot(acousticness, danceability, main="Relation Acousticness-Danceability", 
+     xlab="Acousticness ", ylab="Danceability", pch=19, cex = 0.15)
 
 #Correlation Acousticness-Danceability
 abline(lm(danceability ~ acousticness), col = "red", lwd = 3)
@@ -44,7 +44,7 @@ install.packages("plotly")
 library(plotly)
 
 fig <- plot_ly(data, x = ~acousticness, z = ~popularity, y = ~danceability, color = ~music_genre,
-               text = ~paste('</br> Artist: ', artist_name,
+               size = 0.1, text = ~paste('</br> Artist: ', artist_name,
                              '</br> Song: ', track_name))
 fig <- fig %>% add_markers()
 fig <- fig %>% layout(scene = list(xaxis = list(title = 'acousticness'),
